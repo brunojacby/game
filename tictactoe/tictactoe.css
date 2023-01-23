@@ -40,3 +40,8 @@ hr {
   background-color: gray;
   color: darkgreen;  
 }
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+}

@@ -67,8 +67,7 @@ function checkWinner() {
         if (board[r][0] == board[r][1] && board[r][1] == board[r][2] && board[r][0] != '') {
             for (let i = 0; i < 3; i++) {
                 let tile = document.getElementById(r.toString() + "-" + i.toString()); 
-                tile.classList.add("winner")
-                document.getElementById("0-0").classList.add("winner")  
+                tile.classList.add("winner")                  
             }
             gameOver = true;
             return
@@ -80,8 +79,7 @@ function checkWinner() {
         if (board[0][c] == board[1][c] && board[1][c] == board[2][c] && board[0][c] != '') {
             for (let i = 0; i < 3; i++) {
                 let tile = document.getElementById(i.toString() + "-" + c.toString()); 
-                tile.classList.add("winner")
-                document.getElementById("0-0").classList.add("winner")  
+                tile.classList.add("winner")                  
             }
             gameOver = true;
             return
@@ -92,8 +90,7 @@ function checkWinner() {
     if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] !== '' ) {
         for (let i = 0; i < 3; i++) {
             let tile = document.getElementById(i.toString() + "-" + i.toString())
-            tile.classList.add("winner")
-            document.getElementById("0-0").classList.add("winner")  
+            tile.classList.add("winner")             
         }              
         gameOver = true;
         return;
