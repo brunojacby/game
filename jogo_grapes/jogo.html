@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jogo.css">
+    <title>Get the grape</title>
+</head>
+<body>
+    <div id="jogo">
+        <div id="score">Score: 00</div>        
+        <div id="bg"><img src="bgtree.png" alt="" ></div>
+        <img id="racoon" src="/img/racoon.gif">
+        <div id="uva1"><img src="/img/uva.webp" alt=""></div>
+        <div id="uva2"><img src="/img/uva.webp" alt=""></div>
+        <div id="uva3"><img src="/img/uva.webp" alt=""></div>
+        <div id="uva4"><img src="/img/uva.webp" alt=""></div>
+        <div id="uva5"><img src="/img/uva.webp" alt=""></div>        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>       
+        $(document).ready(function(){
+        $(document).on("keydown", function(e){
+            var img = $("#racoon");
+            if (e.key === "d") {
+            img.css("left", "+=10px");
+            } else if (e.key === "a") {
+            img.css("left", "-=10px");
+            } else if (e.key === "w") {
+            img.css("top", "-=10px");
+            } else if (e.key === "s") {
+            img.css("top", "+=10px");
+            }
+        });
+        });
+        
+        $(document).on("keydown", function(e) {
+            if (e.key === "a") {
+                $("#racoon").addClass("rotate");
+            }
+        });
+        $(document).on("keyup", function(e) {
+            if (e.key === "d") {
+                $("#racoon").removeClass("rotate");
+            }
+        });
+     
+       
+
+
+ 
+    </script>
+</body>
+</html>

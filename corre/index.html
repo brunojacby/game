@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jogo do Guaxinim</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<br>
+<div id="principal">
+<div id="pontos" style="padding:3px;font-size:20px;"></div>
+<div id="personagem3"></div>
+<div id="chao"></div>
+<div id="obstaculo"></div>
+<img id="obstaculo2" src="uva.webp">
+
+</div>
+
+
+<script src="index.js"></script>
+<script>  
+
+document.addEventListener('keydown', function(event) {
+  if (event.keyCode === 38) {
+    pular();
+  }
+});
+
+</script>
+
+
+
+</body>
+</html>

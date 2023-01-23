@@ -1,0 +1,115 @@
+body {
+    margin: auto;    
+    text-align: center;
+}
+
+
+/*configuraçoes do cenário do jogo */
+#principal {
+  background-color: #fff;
+  margin: auto;
+  position: relative;
+  max-width: 900px;  
+  height: 350px;
+  border: 3px solid #73AD21;
+}
+
+
+/*configuraçoes do personagem do jogo*/
+#personagem3 {
+  z-index:1000;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 120px;
+  left: -10px;
+  background: url('racoon.gif');
+  background-repeat: no-repeat;
+  background-position-x: 65px;
+  background-position-y: 0px;
+  background-size: contain;  
+}
+
+
+/*configuraçoes do chão jogo*/
+
+#chao {
+  width: 100%;
+  height: 112px;
+  margin: auto;
+  position: absolute;
+  bottom: 0px;
+  background: url('https://www.joemaster.com.br/tutoriais/wp-content/uploads/2020/07/como-fazer-um-jogo-de-pular-obstaculos-e-pontuacao-com-html-css-e-javascript-2.png')0px 0px;
+  animation: play2 2s steps(10) infinite;
+}
+
+@keyframes play2 {
+    100% { background-position-x: -112px; }
+}
+
+#obstaculo
+{
+background: url('itens2.jpg');
+background-position-x: 0px;
+background-position-y: 0px;
+position: absolute;
+z-index:1009;
+left: 850px;
+top: 210px;
+width:41px;
+height:28px;
+animation: play3 2s steps(10) infinite;
+}
+
+@keyframes play3 {
+    100% { left: 0px; }
+}
+
+#obstaculo2
+{
+background-position-x: -155px;
+background-position-y: -90px;
+position: absolute;
+z-index:1009;
+left: 850px;
+top: 100px;
+width:50px;
+height:50px;
+animation: play4 2s steps(10) infinite;
+}
+
+@keyframes play4 {
+    100% { left: 0px; }
+}
+
+
+button {
+    font-size: 1.5em;
+    background-color: rgb(100, 240, 100);
+    width: fit-content;
+    padding: 10px 20px;
+    border: 1px solid green;
+    border-radius: 7px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgba(8, 70, 8, 0.596);
+    color: white;
+}
+
+.inicio {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+
+.again {
+    position: relative;
+    z-index: 9000;    
+}
